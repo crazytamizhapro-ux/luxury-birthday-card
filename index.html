@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cinematic Birthday Card</title>
+    <style>
+        body { margin: 0; font-family: 'Arial', sans-serif; }
+        .hero { background: url('hero-image.jpg') no-repeat center center; height: 100vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .music-box { display: flex; justify-content: center; margin: 20px; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; margin: 20px; }
+        .memory { margin: 10px; border: 1px solid #ccc; padding: 10px; display: flex; flex-direction: column; align-items: center; }
+        .message { margin: 20px; text-align: center; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Happy Birthday!</h1>
+        <p>Make your special day unforgettable.</p>
+    </div>
+
+    <div class="music-box">
+        <div class="vinyl-disc">
+            <img src="vinyl-disc.png" alt="Vinyl Disc" />
+            <audio controls>
+                <source src="birthday-song.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <h2>Memory Gallery</h2>
+        <input type="file" accept="image/*" multiple />
+        <div class="memory" id="uploaded-images"></div>
+    </div>
+
+    <div class="message">
+        <h2>Message From the Heart</h2>
+        <textarea rows="4" cols="50" placeholder="Write your heartfelt message here..."></textarea>
+    </div>
+
+    <div class="gift-reveal">
+        <button onclick="showModal()">Reveal Your Gift!</button>
+        <div class="modal" id="gift-modal">
+            <h2>Your Gift!</h2>
+            <p>Surprise! Here’s your gift.</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    
+    <script>
+        function showModal() {
+            document.getElementById('gift-modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('gift-modal').style.display = 'none';
+        }
+        // Add confetti animation logic here when revealing gift
+    </script>
+</body>
+</html>
